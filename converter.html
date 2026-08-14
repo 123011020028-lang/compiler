@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>🧠 NL → C Code</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="converter.html">Converter</a>
+        <a href="about.html">About</a>
+        <button class="toggle-btn" onclick="toggleTheme()">🌙 / ☀️</button>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h1>Natural Language to C Code</h1>
+
+    <textarea id="inputText" placeholder="Enter instruction..."></textarea>
+    <br>
+
+    <button onclick="convertCode()">Convert</button>
+
+    <h2>Generated C Code:</h2>
+    <pre id="outputCode"></pre>
+
+    <button onclick="copyCode()">📋 Copy Code</button>
+
+    <!-- ✅ LEXICAL ANALYSIS TABLE -->
+    <h2>Lexical Analysis:</h2>
+
+    <table id="tokenTable" class="token-table">
+        <tr>
+            <th>Token</th>
+            <th>Type</th>
+        </tr>
+    </table>
+
+    <!-- ✅ PARSE TREE -->
+    <h2>Parse Tree:</h2>
+    <pre id="parseTree" class="box"></pre>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
